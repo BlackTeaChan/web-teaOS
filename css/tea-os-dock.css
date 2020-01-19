@@ -1,0 +1,101 @@
+/**
+ * teaOS Dock样式
+ * @author blackteachan
+ * 创建日期 2020-01-19 14:08
+ */
+
+*{
+    font-size: 0;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.tea-os-dock{
+    height: 53px;
+    border: 1px #ddd solid;
+    box-shadow: 0 0 1px #ddd;
+    backdrop-filter: blur(10px) brightness(150%);
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.tea-os-dock ul, .tea-os-dock li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+}
+/*Dock ul标签*/
+.tea-os-dock-ul:after {
+    content: "";
+    height: 41px;
+    width: 1px;
+    background: #000;
+    position: absolute;
+    top: 7px;
+}.tea-os-dock-ul:last-child:after {
+    content: "";
+    width: 0px;
+}
+/*Dock li标签*/
+.tea-os-dock li{
+}
+/*Dock单项*/
+.tea-os-dock-item{
+    /*width: 50px;*/
+    /*height: 50px;*/
+}
+/*下方黑点*/
+.tea-os-dock-bottom-dot:before{
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    background: #000;
+    position: absolute;
+    bottom: 2px;
+    margin: 0 19px;
+}
+/*Dock单项的图标*/
+.tea-os-dock-item-icon{
+    width: 41px;
+    height: 41px;
+    margin: 5px 0 7px 5px;
+    background-size: 100% 100%;
+}.tea-os-dock li:first-child .tea-os-dock-item-icon{
+    margin-left: 5px;
+}.tea-os-dock li:last-child .tea-os-dock-item-icon{
+    margin-right: 5px;
+}
+/*Dock单项的文本*/
+.tea-os-dock-item-text{
+    position: absolute;
+    text-align: center;
+    top: -75%;
+    background: #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    display: none;
+}.tea-os-dock-item:hover .tea-os-dock-item-text{
+    display: block;
+}
+
+
+/**
+ * icon
+ */
+.tea-os-icon-finder{
+    background-image: url("../image/icon_finder.png");
+}
+.tea-os-icon-launchpad{
+    background-image: url("../image/icon_launchpad.png");
+}
+.tea-os-icon-phsz{
+    background-image: url("../image/icon_phsz.png");
+}
+.tea-os-icon-fzl{
+    background-image: url("../image/icon_fzl.png");
+}
